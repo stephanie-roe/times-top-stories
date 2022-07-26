@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../App.css';
 import ArticleList from './ArticleList';
+import NavBar from "./NavBar";
 
 const App = () => {
   const [allArticles, setAllArticles] = useState([])
@@ -23,6 +24,8 @@ const App = () => {
 
   return (
     <main>
+      <h1>Times Top Stories</h1>
+      <NavBar articles={allArticles} />
       <ArticleList articles={allArticles} /> 
     </main>
   )

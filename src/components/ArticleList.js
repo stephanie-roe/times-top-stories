@@ -1,4 +1,6 @@
 import ArticleSummary from "./ArticleSummary";
+import styled from "styled-components";
+
 
 
 const ArticleList = ({articles}) => {
@@ -6,10 +8,16 @@ const ArticleList = ({articles}) => {
         return <ArticleSummary details={article} key={articles.indexOf(article)}/> 
     })
     return (
-        <section>
+        <ArticleListSection>
             {listItems}
-        </section>
+        </ArticleListSection>
     )
 }
 
 export default ArticleList; 
+
+const ArticleListSection = styled.section`
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+`

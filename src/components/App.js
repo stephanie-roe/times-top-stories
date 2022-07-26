@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import '../App.css';
 import ArticleList from './ArticleList';
 import NavBar from "./NavBar";
+import styled from "styled-components";
 
 const App = () => {
   const [allArticles, setAllArticles] = useState([])
@@ -24,7 +25,7 @@ const App = () => {
 
   return (
     <main>
-      <h1>Times Top Stories</h1>
+      <Header>Times Top Stories</Header>
       <NavBar articles={allArticles} />
       <ArticleList articles={allArticles} /> 
     </main>
@@ -32,3 +33,8 @@ const App = () => {
 }
 
 export default App;
+
+const Header = styled.h1`
+  text-align: center;
+  font-size: 50px;
+`

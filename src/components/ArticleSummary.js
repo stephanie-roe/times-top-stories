@@ -2,15 +2,26 @@ import styled from "styled-components";
 
 
 const ArticleSummary = ({details}) => {
-    return (
-        <SummarySection>
-            <ListImage src={details.multimedia[0].url} alt={details.multimedia[0].caption} /> 
-            <ContentContainer>
-                <h2>{details.title}</h2>
-                <p>{details.des_facet[0]}</p>
-            </ContentContainer>
-        </SummarySection>
-    )
+    if (!details.multimedia) {
+        return (
+            <SummarySection>
+                <ContentContainer>
+                    <h2>{details.title}</h2>
+                    <p>{details.des_facet[0]}</p>
+                </ContentContainer>
+            </SummarySection>
+        )
+    } else {
+        return (
+            <SummarySection>
+                <ListImage src={details.multimedia[0].url} alt={details.multimedia[0].caption} /> 
+                <ContentContainer>
+                    <h2>{details.title}</h2>
+                    <p>{details.des_facet[0]}</p>
+                </ContentContainer>
+            </SummarySection>
+        )
+    }
 }
 
 export default ArticleSummary
@@ -22,14 +33,14 @@ const SummarySection = styled.section`
     flex-direction: row;
     align-items: center;
     padding: 20px;
-    margin: 20px;
+    margin: 40px;
 `
 
 const ListImage = styled.img`
-    width: 250px;
-    height: 200px;
+    width: 350px;
+    height: 300px;
     object-fit: cover;
-    margin: 10px;
+    margin: 20px;
 `
 
 const ContentContainer = styled.div`

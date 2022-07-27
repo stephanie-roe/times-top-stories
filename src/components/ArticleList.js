@@ -1,11 +1,15 @@
 import ArticleSummary from "./ArticleSummary";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 
 
 const ArticleList = ({articles}) => {
-    const listItems = articles.map(article => {
-        return <ArticleSummary details={article} key={articles.indexOf(article)}/> 
+    const listItems = articles.map((article, index) => {
+        return(
+            <Link to={`/articles/${index}`}>
+                 <ArticleSummary details={article} key={articles.indexOf(article)}/> 
+            </Link>
+        ) 
     })
     return (
         <ArticleListSection>

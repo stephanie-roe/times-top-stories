@@ -7,12 +7,16 @@ const ArticleExpanded = ({findArticle}) => {
     const [details, setDetails] = useState({})
 
     useEffect(() => {
-        console.log(id)
         setDetails(findArticle(id))
     }, [details])
+
     return (
         <ArticleExpandedSection>
-            <h2>TITLE</h2>
+            <h2>{details.title}</h2>
+            <p>{details.byline}</p>
+            <img src={details.multimedia[0].url} alt={details.multimedia[0].caption} /> 
+            <p>{details.multimedia[0].caption}</p>
+            <button><a href={details.short_url} target="_blank">Read More on NYT.com</a></button>
         </ArticleExpandedSection>
     )
 }

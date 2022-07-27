@@ -1,20 +1,15 @@
 import styled from "styled-components";
 
 const NavBar = ({articles}) => {
-    const filters = articles.reduce((acc, article) => {
-        if (!acc.includes(article.section)) {
-            acc.push(article.section)
-        }
-        return acc
-    }, [])
+    // const sections = ["arts", "automobiles", "books", "business", "fashion", "food", "health", "home", "insider", "magazine", "movies", "nyregion", "obituaries", "opinion", "politics", "realestate", "science", "sports", "sundayreview", "technology", "theater", "t-magazine", "travel", "upshot", "us", "world"]
 
-    const filterButtons = filters.map(filter => {
-        return <FilterButton key={filters.indexOf(filter)}>{filter}</FilterButton>
-    })
+    // const filterButtons = sections.map(section => {
+    //     return <FilterButton key={sections.indexOf(section)}>{section}</FilterButton>
+    // })
 
     return (
         <Nav>
-            {filterButtons}
+            <button>home</button>
         </Nav>
     )
 }
@@ -23,7 +18,7 @@ export default NavBar
 
 const Nav = styled.nav`
     width: 100vw;
-    display: flex;
+    display: grid;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;

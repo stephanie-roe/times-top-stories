@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 
 const ArticleList = ({articles}) => {
-    const listItems = articles.map(article => {
+    const listItems = articles.map((article, index) => {
         return(
-            <Link to={`/articles/${articles.indexOf(article)}`}>
+            <Link to={`/articles/${index}`}>
                  <ArticleSummary details={article} key={articles.indexOf(article)}/> 
             </Link>
         ) 

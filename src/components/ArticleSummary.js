@@ -22,14 +22,14 @@ const SummarySection = styled.section`
     flex-direction: row;
     align-items: center;
     padding: 20px;
-    margin: 20px;
+    margin: 40px;
 `
 
 const ListImage = styled.img`
-    width: 250px;
-    height: 200px;
+    width: 350px;
+    height: 300px;
     object-fit: cover;
-    margin: 10px;
+    margin: 20px;
 `
 
 const ContentContainer = styled.div`

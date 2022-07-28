@@ -13,8 +13,8 @@ const ArticleExpanded = ({findArticle}) => {
     if(details && details.multimedia) {
         return (
             <ArticleExpandedSection>
-                <ArticleTitle>{details.title}</ArticleTitle>
-                <Byline>{details.byline}</Byline>
+                <ArticleTitle className="expanded-title">{details.title}</ArticleTitle>
+                <Byline className="byline">{details.byline}</Byline>
                 <ArticleImage src={details.multimedia[0].url} alt={details.multimedia[0].caption} /> 
                 <Caption>{details.multimedia[0].caption}</Caption>
                 <ReadMoreButton><ShortURL href={details.short_url} target="_blank">Read More on NYT.com</ShortURL></ReadMoreButton>
@@ -23,8 +23,8 @@ const ArticleExpanded = ({findArticle}) => {
     } else if (details && details.title) {
         return (
             <ArticleExpandedSection>
-                <ArticleTitle>{details.title}</ArticleTitle>
-                <Byline>{details.byline}</Byline>
+                <ArticleTitle className="expanded-title">{details.title}</ArticleTitle>
+                <Byline className="byline">{details.byline}</Byline>
                  <ArticleImage src={require(`../assets/filler-image.jpg`)} alt="upclose image of newspapers" /> 
                 <ReadMoreButton><ShortURL href={details.short_url} target="_blank">Read More on NYT.com</ShortURL></ReadMoreButton>
             </ArticleExpandedSection>

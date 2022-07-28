@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ArticleSummary = ({details}) => {
     if (!details.multimedia) {
         return (
-            <SummarySection>
+            <SummarySection className="article-summary">
                  <ListImage src={require(`../assets/filler-image.jpg`)} alt="upclose image of newspapers" /> 
                 <ContentContainer>
                     <h2>{details.title}</h2>
@@ -13,7 +13,7 @@ const ArticleSummary = ({details}) => {
         )
     } else {
         return (
-            <SummarySection>
+            <SummarySection className="article-summary">
                 <ListImage src={details.multimedia[0].url} alt={details.multimedia[0].caption} /> 
                 <ContentContainer>
                     <h2>{details.title}</h2>

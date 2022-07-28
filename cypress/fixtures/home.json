@@ -1,0 +1,38 @@
+{
+  "results": [
+    {"abstract": "The West Virginia Democrat said he had relented and agreed to sign on to a climate, energy and tax package after returning to negotiations to draft a version that would combat inflation.",
+    "byline": "By Emily Cochrane",
+    "created_date": "2022-07-28T14:29:34-04:00",
+    "des_facet": ["United States Politics and Government", "Law and Legislation", "Inflation (Economics)"],
+    "geo_facet": [],
+    "item_type": "Article",
+    "multimedia": [{
+      "caption": "Senator Joe Manchin III had been the chief Democratic holdout on the package.",   
+      "url": "https://static01.nyt.com/images/2022/07/28/us/politics/dc-cong-1/merlin_210717444_cea88b90-6690-417d-bb60-9979f525a3dd-superJumbo.jpg"
+    }],
+    "section": "us",
+    "short_url": "https://nyti.ms/3vj1A5y",
+    "subsection": "politics",
+    "title": "After Clash, Manchin and Schumer Rushed to Reset Climate and Tax Deal",
+    "updated_date": "2022-07-28T15:24:37-04:00",
+    "uri": "nyt://article/375bee1a-ebbb-5008-8a24-1e45a504f520",
+    "url": "https://www.nytimes.com/2022/07/28/us/politics/manchin-schumer-climate-tax-deal.html"},
+    {
+      "abstract": "Legislation agreed to by top Democrats falls far short of closing a tax loophole that party leaders have complained about for years but would narrow its preferential treatment.",
+      "byline": "By Alan Rappeport and Emily Flitter",
+      "des_facet": ["Capital Gains Tax", "United States Politics and Government", "Private Equity", "Taxation", "High Net Worth Individuals"],
+      "multimedia": [
+        {
+          "caption": "Senators Joe Manchin, left, and Chuck Schumer reached an agreement this week that would take a small step toward narrowing the carried interest loophole.",
+          "url": "https://static01.nyt.com/images/2022/07/28/business/28dc-carriedinterest/merlin_203897358_16d19599-3a48-4744-868e-0e8a741d6473-superJumbo.jpg"
+        }
+      ],
+      "section": "business",
+      "short_url": "https://nyti.ms/3cKXHzW",
+      "subsection": "",
+      "title": "Carried Interest Is Back in the Headlines. What Would a New Tax Proposal Do?",
+      "uri": "nyt://article/6186d37d-9fac-5182-a758-a547f831ea1d",
+      "url": "https://www.nytimes.com/2022/07/28/business/carried-interest-loophole-tax-proposal.html"
+    }
+  ]
+}

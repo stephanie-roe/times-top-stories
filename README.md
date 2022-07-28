@@ -9,12 +9,14 @@ Times Top Stories is a Takehome Technical Challenge for the Turing School of Sof
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 ![GH Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white)
+![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
 
 ## Set Up & Installation
 - Fork and clone this repository. 
 - Once cloned onto your machine, `cd` into the root directory. 
 - Run `npm install` to ensure all dependencies are installed properly. 
 - Run `npm start` to see the project in your browser. 
+- Run `npm run cypress` to run the test suite. 
 - Happy building! 
 
 ## Features
@@ -25,10 +27,18 @@ As a user, I am able to:
 - Visit the link for the article on the New York Times website
 - Navigate back to the homepage from any user flow
 
+## Execution 
+![homepage](./src/assets/homepage.png)
+![article expanded view](./src/assets/expanded-view.png)
+
+## Extensions
+- All user flows are tested and network requests are stubbed using Cypress E2E testing. 
+- Application implements accessible design, with a Lighhouse Audit score of **100% in accessibility** and **92% in best practices**. 
+
+![light house audit results](./src/assets/accessibility-audit.png)
+
 ## Future Extensions
-- Implementation of a thorough testing suite using Cypress
 - Addition of Responsive Design to enable access for mobile users
-- Audit application using WAVE/ Lighthouse and refactor to increase accessibility for all users. 
 
 ## Spec
 The expectations for this take home challenge can be found [here](https://mod4.turing.edu/projects/take_home/take_home_fe) and [here](https://mod4.turing.edu/projects/take_home/take_home_rubric).

@@ -14,7 +14,7 @@ const ArticleList = ({articles, setSection}) => {
     })
     return (
         <ArticleListSection>
-            <ArticlesList>
+            <ArticlesList className="article-list">
                 {listItems}
             </ArticlesList>
             <Filter setSection={setSection}/>

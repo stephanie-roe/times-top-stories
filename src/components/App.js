@@ -17,6 +17,7 @@ const App = () => {
     try {
       const response = await fetch(url)
       const data = await response.json()
+      console.log(data)
       setAllArticles(data.results)
     } catch (error) {
       console.log("error:", error)

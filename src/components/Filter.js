@@ -5,14 +5,12 @@ const Filter = ({setSection}) => {
 
     const filterButtons = sections.map(section => {
         return (
-            
-                <FilterButton onClick={() => setSection(section)} key={sections.indexOf(section)}>{section}</FilterButton>
-         
+            <FilterButton className="filter-button" onClick={() => setSection(section)} key={sections.indexOf(section)}>{section}</FilterButton>
         )
     })
 
     return (
-        <FilterContainer>
+        <FilterContainer className="filter-list">
             {filterButtons}
         </FilterContainer>
     )

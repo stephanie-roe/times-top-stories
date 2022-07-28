@@ -4,9 +4,9 @@ import {Link} from "react-router-dom";
 const NavBar = ({setSection}) => {
     return (
         <Nav>
-            <Header>Times Top Stories</Header>
+            <Header className="header">Times Top Stories</Header>
             <Link to="/">
-                <HomeButton onClick={() => setSection("home")}>home</HomeButton>
+                <HomeButton className="home-button" onClick={() => setSection("home")}>home</HomeButton>
             </Link>
         </Nav>
     )

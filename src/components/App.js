@@ -36,11 +36,10 @@ const App = () => {
 
   return (
     <main>
-      <Header>Times Top Stories</Header>
       <NavBar articles={allArticles} setSection={setSection}/>
-      <Filter setSection={setSection}/> 
+      {/* <Filter setSection={setSection}/>  */}
       <Routes>
-        <Route exact path="/" element={ <ArticleList articles={allArticles}/> }/>
+        <Route exact path="/" element={ <ArticleList setSection={setSection} articles={allArticles}/> }/>
         <Route exact path="/articles/:id" element={<ArticleExpanded findArticle={findArticle}/>} />
       </Routes>
      
@@ -50,7 +49,4 @@ const App = () => {
 
 export default App;
 
-const Header = styled.h1`
-  text-align: center;
-  font-size: 50px;
-`
+

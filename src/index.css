@@ -2,15 +2,19 @@ body {
   margin: 0;
   justify-content: center;
   align-items: center;
+  background-color: #fbfbf8 ;
 }
 
 h1, h2 {
   font-family: 'Ultra', serif;
   font-weight: 100;
+  color: #36454F;
 }
 
 p {
   font-family: 'News Cycle', sans-serif;
   font-weight: 500;
   font-size: 20px;
+  color: #36454F;
+
 }

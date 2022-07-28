@@ -7,16 +7,31 @@ const Filter = ({setSection}) => {
     const filterButtons = sections.map(section => {
         return (
             
-                <button onClick={() => setSection(section)} key={sections.indexOf(section)}>{section}</button>
+                <FilterButton onClick={() => setSection(section)} key={sections.indexOf(section)}>{section}</FilterButton>
          
         )
     })
 
     return (
-        <aside>
+        <FilterContainer>
             {filterButtons}
-        </aside>
+        </FilterContainer>
     )
 }
 
 export default Filter
+
+const FilterContainer = styled.aside`
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+`
+
+const FilterButton = styled.button`
+    border: none;
+    padding: 10px 50px;
+    margin: 20px;
+    border-radius: 30px;
+    color: #36454F;
+    background: #D3D3D3;
+`

@@ -1,19 +1,23 @@
 import ArticleSummary from "./ArticleSummary";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Filter from "./Filter";
 
 
-const ArticleList = ({articles}) => {
+const ArticleList = ({articles, setSection}) => {
     const listItems = articles.map((article, index) => {
         return(
-            <Link to={`/articles/${index}`} key={articles.indexOf(article)}>
+            <ArticleSummaryLink to={`/articles/${index}`} key={articles.indexOf(article)}>
                  <ArticleSummary details={article} key={articles.indexOf(article)}/> 
-            </Link>
+            </ArticleSummaryLink>
         ) 
     })
     return (
         <ArticleListSection>
-            {listItems}
+            <ArticlesList>
+                {listItems}
+            </ArticlesList>
+            <Filter setSection={setSection}/>
         </ArticleListSection>
     )
 }
@@ -23,5 +27,15 @@ export default ArticleList;
 const ArticleListSection = styled.section`
     width: 90vw;
     display: flex;
+    flex-direction: row;
+`
+
+const ArticlesList = styled.div`
+    display: flex;
     flex-direction: column;
+    width: 80vw;
+`
+
+const ArticleSummaryLink = styled(Link)`
+    text-decoration: none;
 `

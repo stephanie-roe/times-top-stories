@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ArticleList = ({articles}) => {
     const listItems = articles.map((article, index) => {
         return(
-            <Link to={`/articles/${index}`}>
+            <Link to={`/articles/${index}`} key={articles.indexOf(article)}>
                  <ArticleSummary details={article} key={articles.indexOf(article)}/> 
             </Link>
         ) 

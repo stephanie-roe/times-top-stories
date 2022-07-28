@@ -1,15 +1,12 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
-const NavBar = ({articles}) => {
-    // const sections = ["arts", "automobiles", "books", "business", "fashion", "food", "health", "home", "insider", "magazine", "movies", "nyregion", "obituaries", "opinion", "politics", "realestate", "science", "sports", "sundayreview", "technology", "theater", "t-magazine", "travel", "upshot", "us", "world"]
-
-    // const filterButtons = sections.map(section => {
-    //     return <FilterButton key={sections.indexOf(section)}>{section}</FilterButton>
-    // })
-
+const NavBar = ({articles, setSection}) => {
     return (
         <Nav>
-            <button>home</button>
+            <Link to="/">
+                <button onClick={() => setSection("home")}>home</button>
+            </Link>
         </Nav>
     )
 }

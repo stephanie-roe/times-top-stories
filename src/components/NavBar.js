@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 
-const NavBar = ({articles, setSection}) => {
+const NavBar = ({setSection}) => {
     return (
         <Nav>
             <Header>Times Top Stories</Header>
@@ -20,13 +20,6 @@ const Nav = styled.nav`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-`
-const FilterButton = styled.button`
-    margin: 10px;
-    padding: 10px;
-    border: none;
-    background: none;
-    font-size: 20px;
 `
 
 const Header = styled.h1`

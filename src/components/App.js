@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 import styled from "styled-components";
 import { Route, Routes } from "react-router-dom";
 import ArticleExpanded from './ArticleExpanded';
-import Filter from "./Filter"
+
 
 const App = () => {
   const [allArticles, setAllArticles] = useState([])
@@ -36,8 +36,7 @@ const App = () => {
 
   return (
     <Main>
-      <NavBar articles={allArticles} setSection={setSection}/>
-      {/* <Filter setSection={setSection}/>  */}
+      <NavBar setSection={setSection}/>
       <Routes>
         <Route exact path="/" element={ <ArticleList setSection={setSection} articles={allArticles}/> }/>
         <Route exact path="/articles/:id" element={<ArticleExpanded findArticle={findArticle}/>} />

@@ -50,6 +50,7 @@ const ArticleTitle = styled.h2`
 const Byline = styled.p`
     font-size: 30px;
     text-align: center;
+    margin-top: 0px;
 `
 
 const ArticleImage = styled.img`

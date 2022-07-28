@@ -35,7 +35,7 @@ const App = () => {
   }
 
   return (
-    <main>
+    <Main>
       <NavBar articles={allArticles} setSection={setSection}/>
       {/* <Filter setSection={setSection}/>  */}
       <Routes>
@@ -43,10 +43,16 @@ const App = () => {
         <Route exact path="/articles/:id" element={<ArticleExpanded findArticle={findArticle}/>} />
       </Routes>
      
-    </main>
+    </Main>
   )
 }
 
 export default App;
 
 
+const Main = styled.main`
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`

@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 import styled from "styled-components";
 import { Route, Routes } from "react-router-dom";
 import ArticleExpanded from './ArticleExpanded';
-import Filter from "./Filter"
+
 
 const App = () => {
   const [allArticles, setAllArticles] = useState([])
@@ -35,22 +35,23 @@ const App = () => {
   }
 
   return (
-    <main>
-      <Header>Times Top Stories</Header>
-      <NavBar articles={allArticles} setSection={setSection}/>
-      <Filter setSection={setSection}/> 
+    <Main>
+      <NavBar setSection={setSection}/>
       <Routes>
-        <Route exact path="/" element={ <ArticleList articles={allArticles}/> }/>
+        <Route exact path="/" element={ <ArticleList setSection={setSection} articles={allArticles}/> }/>
         <Route exact path="/articles/:id" element={<ArticleExpanded findArticle={findArticle}/>} />
       </Routes>
      
-    </main>
+    </Main>
   )
 }
 
 export default App;
 
-const Header = styled.h1`
-  text-align: center;
-  font-size: 50px;
+
+const Main = styled.main`
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
